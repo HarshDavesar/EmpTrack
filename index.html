@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee DataBase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <header id="header">
+
+        <h1 i="header-h1">Employee DataBase Management System</h1>
+        <button type="menu" id="header-btn">Add Employee</button>
+
+    </header>
+
+
+    <!-- emp-names -->
+
+    <div class="main-container">
+        <section id="allEmpDetails">
+            <div id="allEmpDetails-h3">
+                <h3>All Employees :</h3>
+                <div id="all-details-shown">
+                    <ul id="list"></ul> 
+                </div>
+            </div>
+        </section>
+
+        <!-- emp-details -->
+
+        <section id="empDetail">
+            <div id="aboutEmp">
+                <img src="" id="emp-img">
+                <div id="allEmpDetail" style="margin-left: 30px;">
+                    <p id="emp-name"></p>
+                    <p id="emp-location"></p>
+                    <p id="emp-gmail"></p>
+                    <p id="emp-dob"></p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+<!-- form -->
+
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Add a new Employee</h2>
+            <form id="employeeForm">
+                <div class="form-group">
+                    <input type="text" id="firstName" placeholder="First Name" required>
+                    <input type="text" id="lastName" placeholder="Last Name" required>
+                </div>
+                <input type="url" id="imageURL" placeholder="Image URL (Optional)">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="contact" placeholder="Contact" pattern="[0-9]{10}" maxlength="10" required>
+                <input type="number" id="salary" placeholder="Salary" required>
+                <textarea id="address" rows="2" placeholder="Address" required></textarea>
+                <input type="date" id="dob" required>
+                <button type="submit" id="form-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
